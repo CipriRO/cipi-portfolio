@@ -17,3 +17,34 @@ export const SocialMediaLinks = [
   { name: "Instagram", icon: InstagramIcon, link: "" },
   { name: "Mail", icon: MailIcon, link: "" },
 ] as const;
+
+export const SkillsList = [
+  {
+    title: "Frontend",
+    contents: [
+      "CSS3",
+      "Javascript",
+      "Typescript",
+      "React.js",
+      "TailwindCSS",
+      "Next.js",
+    ],
+  },
+  {
+    title: "Backend",
+    contents: ["Next.js serverless functions", "Mongodb", "Mongoose"],
+  },
+  {
+    title: "Soft Skills",
+    contents: [
+      "Communication",
+      "Problem-Solving",
+      "Adaptability",
+      "Attention to Detail",
+    ],
+  },
+  {
+    title: "Other Skills",
+    contents: ["Responsive Design", "Git", "RESTful APIs"],
+  },
+]
