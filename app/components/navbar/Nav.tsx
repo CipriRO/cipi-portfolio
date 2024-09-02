@@ -30,7 +30,7 @@ const NavLink = ({
   return (
     <Link
       href={link}
-      className={cn("font-medium", {
+      className={cn("font-medium hover:font-bold hover:text-primary transition-all", {
         "font-bold text-primary": pathname === link,
       })}
     >

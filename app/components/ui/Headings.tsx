@@ -6,7 +6,7 @@ export const H1 = ({
   ...props
 }: ComponentPropsWithoutRef<"h1"> & { className?: string }) => {
   return (
-    <h1 className={cn("text-[90px]", className)} {...props} />
+    <h1 className={cn("text-[68px]", className)} {...props} />
   );
 };
 export const H2 = ({
@@ -14,7 +14,7 @@ export const H2 = ({
   ...props
 }: ComponentPropsWithoutRef<"h2"> & { className?: string }) => {
   return (
-    <h2 className={cn("text-[56px]", className)} {...props} />
+    <h2 className={cn("text-[48px]", className)} {...props} />
   );
 };
 export const H3 = ({

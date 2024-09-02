@@ -2,15 +2,13 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = ComponentPropsWithoutRef<"button"> &
-  VariantProps<typeof ButtonVariants> & {
-    className?: string;
-  };
+  VariantProps<typeof ButtonVariants>;
 
-const ButtonVariants = cva("rounded-full font-medium py-2 px-7", {
+export const ButtonVariants = cva("rounded-full font-medium py-2 px-7", {
   variants: {
     variant: {
-      primary: "bg-primary text-primary-content",
-      secondary: "bg-transparent text-copy ring-2 ring-copy",
+      primary: "bg-primary text-primary-content hover:bg-primary-dark transition-colors",
+      secondary: "bg-transparent text-copy border-2 border-copy hover:bg-border transition-colors",
     },
   },
   defaultVariants: {

@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import { cn } from "./lib/utils";
+import Footer from "./components/footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,9 +23,10 @@ export default function RootLayout({
   return (
     <html className="bg-background text-copy" lang="en">
       <body className={cn(poppins.className, "mx-16")}>
-        <div className="max-w-[1300px] mx-auto space-y-28">
+        <div className="max-w-[1300px] mx-auto space-y-16">
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

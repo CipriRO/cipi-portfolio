@@ -1,10 +1,18 @@
-import Button from "./Button";
+import Link from "next/link";
+import { ButtonVariants } from "./Button";
 
 const CtaButtons = () => {
   return (
     <div className="space-x-5">
-      <Button>Get In Touch</Button>
-      <Button variant={"secondary"}>Browse Projects</Button>
+      <Link href="/contact" className={ButtonVariants()}>
+        Get In Touch
+      </Link>
+      <Link
+        href="/projects"
+        className={ButtonVariants({ variant: "secondary" })}
+      >
+        Browse Projects
+      </Link>
     </div>
   );
 };
