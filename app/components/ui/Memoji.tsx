@@ -9,6 +9,7 @@ const Memoji = () => {
         alt="Image of Cipi Memoji"
         width={171}
         height={171}
+        priority={true}
       />
     </div>
   );
