@@ -1,3 +1,4 @@
+import MaxiShuffle from "./MaxiShuffle";
 import MiniShuffle from "./MiniShuffle";
 
 export type PhotoShuffleProps = {
@@ -18,7 +19,7 @@ const PhotoShuffle = ({
       {variant === "mini" ? (
         <MiniShuffle images={images} imagePosition={imagePosition} animation={animation} />
       ) : (
-        <div></div>
+        <MaxiShuffle images={images} imagePosition={imagePosition} animation={animation} />
       )}
     </>
   );

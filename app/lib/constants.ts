@@ -63,7 +63,7 @@ export const skills: SkillProps[] = [
   },
 ];
 
-export const projects: ProjectProps[] = [
+export const projects: Omit<ProjectProps, "variant">[] = [
   {
     title: "Yumy",
     link: "/yumy",
@@ -90,7 +90,7 @@ export const projects: ProjectProps[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
     images: ["https://i.imgur.com/3TrTPYQ.png"],
-    imagePosition: "left",
+    imagePosition: "right",
   },
   {
     title: "Elias Construction",
