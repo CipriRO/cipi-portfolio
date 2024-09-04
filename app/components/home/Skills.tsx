@@ -1,4 +1,4 @@
-import { SkillsList } from "@/app/lib/constants";
+import { skills } from "@/app/lib/constants";
 import { H2, H4 } from "../ui/Headings";
 
 const Skills = () => {
@@ -9,7 +9,7 @@ const Skills = () => {
       </H2>
 
       <div className="grid grid-cols-[repeat(auto-fit,_200px)] gap-24">
-        {SkillsList.map((skill, id) => (
+        {skills.map((skill, id) => (
           <Column key={id} title={skill.title} contents={skill.contents} />
         ))}
       </div>
@@ -18,7 +18,9 @@ const Skills = () => {
 };
 export default Skills;
 
-const Column = ({ title, contents }: { title: string; contents: string[] }) => (
+export type SkillProps = { title: string; contents: string[] };
+
+const Column = ({ title, contents }: SkillProps) => (
   <div className="space-y-3">
     <H4>{title}</H4>
     <div className="space-y-0.5">

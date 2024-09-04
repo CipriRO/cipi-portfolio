@@ -3,6 +3,8 @@ import InstagramIcon from "@/public/logos/instagram.svg";
 import LinkedInIcon from "@/public/logos/linkedin.svg";
 import UpworkIcon from "@/public/logos/upwork.svg";
 import MailIcon from "@/public/logos/mail.svg";
+import { ProjectProps } from "../components/ui/Project";
+import { SkillProps } from "../components/home/Skills";
 
 export const links = [
   { name: "Home", link: "/" },
@@ -18,7 +20,7 @@ export const SocialMediaLinks = [
   { name: "Mail", icon: MailIcon, link: "" },
 ] as const;
 
-export const SkillsList = [
+export const skills: SkillProps[] = [
   {
     title: "Frontend",
     contents: [
@@ -47,4 +49,43 @@ export const SkillsList = [
     title: "Other Skills",
     contents: ["Responsive Design", "Git", "RESTful APIs"],
   },
-]
+];
+
+export const projects: ProjectProps[] = [
+  {
+    title: "Yumy",
+    link: "/yumy",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
+    images: [
+      "https://i.imgur.com/PG6KWZi.png",
+      "https://i.imgur.com/pkE9zku.png",
+      "https://i.imgur.com/xNZtzYg.png",
+    ],
+    imagePosition: "left",
+  },
+  {
+    title: "Cipi Labs",
+    link: "/cipi-labs",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
+    images: ["https://i.imgur.com/8krYAe5.png"],
+    imagePosition: "center",
+  },
+  {
+    title: "Cipi Weather",
+    link: "/cipi-weather",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
+    images: ["https://i.imgur.com/3TrTPYQ.png"],
+    imagePosition: "left",
+  },
+  {
+    title: "Elias Construction",
+    link: "/elias-construction",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
+    images: ["https://i.imgur.com/DrsKYQL.png"],
+    imagePosition: "left",
+  },
+];

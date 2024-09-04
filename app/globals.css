@@ -29,4 +29,8 @@
   .sub-title {
     @apply text-2xl;
   }
+
+  .image-shadow {
+    @apply shadow-[0_4px_20px_rgba(0,_0,_0,_0.35)];
+  }
 }
