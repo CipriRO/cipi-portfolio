@@ -13,11 +13,23 @@ export const links = [
 ] as const;
 
 export const SocialMediaLinks = [
-  { name: "Upwork", icon: UpworkIcon, link: "" },
-  { name: "LinkedIn", icon: LinkedInIcon, link: "" },
-  { name: "Github", icon: GithubIcon, link: "" },
-  { name: "Instagram", icon: InstagramIcon, link: "" },
-  { name: "Mail", icon: MailIcon, link: "" },
+  {
+    name: "Upwork",
+    icon: UpworkIcon,
+    link: "https://www.upwork.com/freelancers/~01ec2d5c129012349e?mp_source=share",
+  },
+  {
+    name: "LinkedIn",
+    icon: LinkedInIcon,
+    link: "https://www.linkedin.com/in/cipi26",
+  },
+  { name: "Github", icon: GithubIcon, link: "https://github.com/CipriRO" },
+  {
+    name: "Instagram",
+    icon: InstagramIcon,
+    link: "https://www.instagram.com/cipi.26_/",
+  },
+  { name: "Mail", icon: MailIcon, link: "mailto:stefanciprian440@icloud.com" },
 ] as const;
 
 export const skills: SkillProps[] = [
