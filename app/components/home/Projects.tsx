@@ -10,11 +10,11 @@ const Projects = () => {
       </H2>
 
       <div className="flex flex-wrap items-center justify-around gap-x-4 gap-y-14">
-        {projects.map((project, id) => (
+        {projects.map((project) => (
           <Project
-            key={id}
+            key={project.id}
+            id={project.id}
             title={project.title}
-            link={project.link}
             variant="mini"
             description={project.description}
             images={project.images}

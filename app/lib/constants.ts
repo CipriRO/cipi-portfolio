@@ -65,8 +65,8 @@ export const skills: SkillProps[] = [
 
 export const projects: Omit<ProjectProps, "variant">[] = [
   {
+    id: "848e7b6e-74d0-4426-ae54-f4645265d8b4",
     title: "Yumy",
-    link: "/yumy",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
     images: [
@@ -77,24 +77,24 @@ export const projects: Omit<ProjectProps, "variant">[] = [
     imagePosition: "left",
   },
   {
+    id: "d1970f6d-06ff-41d3-9791-76b205c45f95",
     title: "Cipi Labs",
-    link: "/cipi-labs",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
     images: ["https://i.imgur.com/8krYAe5.png"],
     imagePosition: "center",
   },
   {
+    id: "6808c827-a955-4a5e-8459-54534e9fadaa",
     title: "Cipi Weather",
-    link: "/cipi-weather",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
     images: ["https://i.imgur.com/3TrTPYQ.png"],
     imagePosition: "right",
   },
   {
+    id: "fb298410-12fd-42b5-bf94-35bff4269f70",
     title: "Elias Construction",
-    link: "/elias-construction",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet rutrum turpis, et efficitur nulla.",
     images: ["https://i.imgur.com/DrsKYQL.png"],
