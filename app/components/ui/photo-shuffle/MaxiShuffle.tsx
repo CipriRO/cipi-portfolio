@@ -6,7 +6,7 @@ const imageClass = "image-shadow rounded-2xl";
 
 const MaxiShuffle = ({ images }: Pick<PhotoShuffleProps, "images">) => {
   return (
-    <div className="flex items-center justify-center overflow-hidden rounded-3xl bg-foreground py-9 shadow-[0_2px_50px_rgba(0,_0,_0,_0.35)]">
+    <div className="flex items-center justify-center overflow-hidden rounded-3xl bg-[url('/project-background.svg')]  py-9 shadow-[0_2px_50px_rgba(0,_0,_0,_0.35)]">
       {images.length === 1 ? (
         <OneImage images={images} />
       ) : images.length === 2 ? (

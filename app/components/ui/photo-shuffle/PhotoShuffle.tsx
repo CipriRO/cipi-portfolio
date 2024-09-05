@@ -19,7 +19,7 @@ const PhotoShuffle = ({
       {variant === "mini" ? (
         <MiniShuffle images={images} imagePosition={imagePosition} animation={animation} />
       ) : (
-        <MaxiShuffle images={images} imagePosition={imagePosition} animation={animation} />
+        <MaxiShuffle images={images} />
       )}
     </>
   );
