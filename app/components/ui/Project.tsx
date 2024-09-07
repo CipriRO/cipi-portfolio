@@ -26,7 +26,7 @@ const Project = ({
     <Link
       href={`/projects/${id}`}
       className={cn("group inline-block", {
-        "w-[411.8px]": variant === "mini",
+        "max-w-[411.8px]": variant === "mini",
         "w-full rounded-3xl p-2 ring-border transition-all hover:ring-2":
           variant === "maxi",
       })}

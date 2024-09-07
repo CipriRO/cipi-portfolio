@@ -6,7 +6,8 @@ export const H1 = ({
   ...props
 }: ComponentPropsWithoutRef<"h1"> & { className?: string }) => {
   return (
-    <h1 className={cn("text-[68px]", className)} {...props} />
+    //text-[68px]
+    <h1 className={cn("text-[clamp(48px,_7vw,_68px)]", className)} {...props} />
   );
 };
 export const H2 = ({
@@ -14,7 +15,11 @@ export const H2 = ({
   ...props
 }: ComponentPropsWithoutRef<"h2"> & { className?: string }) => {
   return (
-    <h2 className={cn("text-[48px]", className)} {...props} />
+    //text-[48px]
+    <h2
+      className={cn("text-[clamp(36px,_5.5vw,_48px)]", className)}
+      {...props}
+    />
   );
 };
 export const H3 = ({
@@ -22,7 +27,11 @@ export const H3 = ({
   ...props
 }: ComponentPropsWithoutRef<"h3"> & { className?: string }) => {
   return (
-    <h3 className={cn("text-[32px]", className)} {...props} />
+    //text-[32px]
+    <h3
+      className={cn("text-[clamp(28px,_3.5vw,_32px)]", className)}
+      {...props}
+    />
   );
 };
 export const H4 = ({
@@ -30,6 +39,7 @@ export const H4 = ({
   ...props
 }: ComponentPropsWithoutRef<"h4"> & { className?: string }) => {
   return (
-    <h4 className={cn("text-[24px]", className)} {...props} />
+    //text-[clamp(20px,_3.5vw,_24px)]
+    <h4 className={cn("text-[20px] sm:text-[24px]", className)} {...props} />
   );
 };

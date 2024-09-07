@@ -8,7 +8,7 @@ const Hero = () => {
       <Memoji />
       <div className="space-y-7">
         <H2 className="font-semibold">Hi. I&apos;m Ciprian🤘</H2>
-        <H1>
+        <H1 className="break-words">
           Building <span className="text-primary">High Performance</span> and{" "}
           <span className="text-primary">User-Friendly</span> web applications
         </H1>

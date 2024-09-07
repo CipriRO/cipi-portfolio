@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ButtonVariants } from "./Button";
+import { ClassValue } from "clsx";
+import { cn } from "@/app/lib/utils";
 
-const CtaButtons = () => {
+const CtaButtons = ({ className }: { className?: ClassValue }) => {
   return (
-    <div className="space-x-5">
+    <div className={cn("flex flex-wrap justify-center gap-5", className)}>
       <Link href="/contact" className={ButtonVariants()}>
         Get In Touch
       </Link>

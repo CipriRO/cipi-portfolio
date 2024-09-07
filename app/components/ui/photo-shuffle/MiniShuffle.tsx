@@ -8,7 +8,7 @@ const MiniShuffle = ({
   imagePosition,
 }: Pick<PhotoShuffleProps, "animation" | "images" | "imagePosition">) => {
   const LastPhotoClass = cn(
-    "absolute left-5 top-6 h-[260px] w-[336px] origin-bottom-left rounded-3xl transition-transform",
+    "absolute left-5 top-6 h-[260px] w-[min(336px,100%)] origin-bottom-left rounded-3xl transition-transform",
     {
       "rotate-[-4.44deg] group-hover:rotate-[-9deg]": animation === "onHover",
       "rotate-[-4.44deg]": animation === "none",
@@ -17,7 +17,7 @@ const MiniShuffle = ({
   );
 
   const MiddlePhotoClass = cn(
-    "absolute left-9 top-3 h-[260px] w-[336px] rounded-3xl transition-transform",
+    "absolute sm:left-9 top-3 h-[260px] w-[min(336px,100%)] rounded-3xl transition-transform",
     {
       "group-hover:-translate-y-4": animation === "onHover",
       "-translate-y-4": animation === "always",
@@ -25,7 +25,7 @@ const MiniShuffle = ({
   );
 
   const FirstPhotoClass = cn(
-    "absolute bottom-4 right-5 h-[260px] w-[336px] origin-bottom-right rounded-3xl transition-transform",
+    "absolute bottom-4 max-sm:-left-3 sm:right-5 h-[260px] w-[min(336px,100%)] origin-bottom-right rounded-3xl transition-transform",
     {
       "rotate-[4.44deg] group-hover:rotate-[9deg]": animation === "onHover",
       "rotate-[4.44deg]": animation === "none",
@@ -34,7 +34,7 @@ const MiniShuffle = ({
   );
 
   return (
-    <div className="relative h-[300.8px] w-full">
+    <div className="relative h-[300.8px] max-sm:max-w-[336px] mx-auto max-w-[411.8px]">
       {/* last image */}
       {images[2] ? (
         <Image

@@ -27,7 +27,7 @@ export const MiniSocial = () => {
 
 export const ExpandSocial = () => {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center justify-center flex-wrap gap-5">
       {SocialMediaLinks.map((link, id) => (
         <Link
           key={id}
