@@ -7,7 +7,7 @@ import CipiLogo from "@/public/logos/cipi.svg"
 
 const Footer = () => {
   return (
-    <footer className="space-y-14 md:space-y-12 pb-6">
+    <footer className="space-y-14 md:space-y-12 pb-6 mt-36">
       <div className="flex items-center justify-around lg:justify-between flex-wrap gap-x-12 gap-y-5">
         <Nav />
         <SocialLinks />

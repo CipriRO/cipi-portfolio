@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html className="bg-background text-copy" lang="en">
       <body className={cn(poppins.className, "mx-5 md:mx-16")}>
-        <div className="max-w-[1300px] mx-auto space-y-28">
+        <div className="max-w-[1300px] mx-auto">
           <Navbar />
           {children}
           <Footer />
