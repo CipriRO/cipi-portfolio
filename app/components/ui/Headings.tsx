@@ -40,6 +40,6 @@ export const H4 = ({
 }: ComponentPropsWithoutRef<"h4"> & { className?: string }) => {
   return (
     //text-[clamp(20px,_3.5vw,_24px)]
-    <h4 className={cn("text-[22px] sm:text-[26px]", className)} {...props} />
+    <h4 className={cn("text-[22px] sm:text-[24px]", className)} {...props} />
   );
 };
