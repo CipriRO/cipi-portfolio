@@ -63,11 +63,11 @@ export const skills: SkillProps[] = [
   },
 ];
 
-type ContentProps = { type: string; info: string | string[] };
+export type ProjectContentProps = { type: string; info: string | string[] };
 
 type ProjectsProps = Omit<ProjectProps, "variant"> & {
-  details: ContentProps[];
-  content: ContentProps[];
+  details: ProjectContentProps[];
+  content: ProjectContentProps[];
 };
 
 export const projects: ProjectsProps[] = [
