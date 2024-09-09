@@ -24,26 +24,35 @@ const page = ({ params }: { params: { id: string } }) => {
 
       <PhotoShuffle images={images} variant="maxi" />
 
-      <div className="flex flex-col items-start gap-10 min-[930px]:flex-row">
-        <div className="min-[930px]:sticky top-5 flex w-full flex-wrap justify-between gap-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)] min-[930px]:w-[350px]">
-          {details.map((detail, id) => (
-            <Detail key={id} detail={detail} />
-          ))}
-        </div>
-
-        <div className="grow-[9999] basis-[411px] space-y-11">
-          {content.map((content, id) => (
-            <Content key={id} content={content} />
-          ))}
-          {content.map((content, id) => (
-            <Content key={id} content={content} />
-          ))}
-        </div>
-      </div>
+      <ProjectDescription details={details} content={content} />
     </main>
   );
 };
 export default page;
+
+const ProjectDescription = ({
+  details,
+  content,
+}: {
+  details: ProjectContentProps[];
+  content: ProjectContentProps[];
+}) => {
+  return (
+    <div className="flex flex-col items-start gap-10 min-[930px]:flex-row">
+      <div className="top-5 flex w-full flex-wrap justify-between gap-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)] min-[930px]:sticky min-[930px]:w-[350px]">
+        {details.map((detail, id) => (
+          <Detail key={id} detail={detail} />
+        ))}
+      </div>
+
+      <div className="grow-[9999] basis-[411px] space-y-11">
+        {content.map((content, id) => (
+          <Content key={id} content={content} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Content = ({ content }: { content: ProjectContentProps }) => {
   const { type, info } = content;
