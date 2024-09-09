@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="bg-background text-copy" lang="en">
+    <html className="bg-background text-copy selection:text-primary-content selection:bg-primary" lang="en">
       <body className={cn(poppins.className, "mx-5 md:mx-16")}>
         <div className="max-w-[1300px] mx-auto">
           <Navbar />
