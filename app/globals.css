@@ -7,41 +7,26 @@
   h2,
   h3,
   h4 {
-    @apply text-pretty font-bold;
+    @apply text-balance font-bold;
   }
 
   h1,
   h2 {
-    @apply tracking-tighter;
+    @apply leading-[1.1em] tracking-tighter;
   }
 
-  h1 {
-    @apply text-[90px] leading-[100%];
-  }
-
-  h2 {
-    @apply text-[56px] leading-[100%];
-  }
-
-  h3 {
-    @apply text-[32px] leading-[130%];
-  }
-
+  h3,
   h4 {
-    @apply text-[24px] leading-[130%];
+    @apply leading-[1.3em] md:tracking-tight;
   }
 
   p {
-    @apply text-lg;
+    @apply text-pretty text-lg;
   }
 }
 
 @layer utilities {
-  .sub-title {
-    @apply text-2xl;
-  }
-
-  .link {
-    @apply font-medium tracking-tight
+  .image-shadow {
+    @apply shadow-[0_4px_20px_rgba(0,_0,_0,_0.35)];
   }
 }
