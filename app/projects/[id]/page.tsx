@@ -2,10 +2,11 @@ import {
   DescriptionContent,
   DescriptionDetail,
 } from "@/app/components/projects/project/Description";
-import { H1 } from "@/app/components/ui/Headings";
+import { H1, H2 } from "@/app/components/ui/Headings";
 import PhotoShuffle from "@/app/components/ui/photo-shuffle/PhotoShuffle";
+import Project from "@/app/components/ui/Project";
 import { ProjectContentProps } from "@/app/lib/constants";
-import { getProjectById } from "@/app/lib/utils";
+import { getProjectById, getProjectRecommendations } from "@/app/lib/utils";
 import { notFound } from "next/navigation";
 
 const page = ({ params }: { params: { id: string } }) => {
@@ -18,23 +19,25 @@ const page = ({ params }: { params: { id: string } }) => {
 
   return (
     <main className="space-y-14">
-      <div className="space-y-4">
+      <article className="space-y-4">
         <H1>
           {title}
           <span className="text-primary">.</span>
         </H1>
         <p className="max-w-[700px] text-copy-light">{description}</p>
-      </div>
+      </article>
 
       <PhotoShuffle images={images} variant="maxi" />
 
-      <ProjectDescription details={details} content={content} />
+      <Description details={details} content={content} />
+
+      <Recommendations id={id} />
     </main>
   );
 };
 export default page;
 
-const ProjectDescription = ({
+const Description = ({
   details,
   content,
 }: {
@@ -43,17 +46,43 @@ const ProjectDescription = ({
 }) => {
   return (
     <div className="flex flex-col items-start gap-10 min-[930px]:flex-row">
-      <div className="top-5 flex w-full flex-wrap justify-between gap-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)] min-[930px]:sticky min-[930px]:w-[350px]">
+      <article className="top-5 flex w-full flex-wrap justify-between gap-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)] min-[930px]:sticky min-[930px]:w-[350px]">
         {details.map((detail, id) => (
           <DescriptionDetail key={id} detail={detail} />
         ))}
-      </div>
+      </article>
 
-      <div className="grow-[9999] basis-[411px] space-y-11">
+      <article className="grow-[9999] basis-[411px] space-y-11">
         {content.map((content, id) => (
           <DescriptionContent key={id} content={content} />
         ))}
-      </div>
+      </article>
     </div>
+  );
+};
+
+const Recommendations = ({ id }: { id: string }) => {
+  const recommendations = getProjectRecommendations(id);
+
+  return (
+    <article className="space-y-9">
+      <H2>
+        Other Projects<span className="text-primary">.</span>
+      </H2>
+
+      <div className="flex flex-wrap items-center justify-around gap-x-4 gap-y-14">
+        {recommendations.map((project, id) => (
+          <Project
+            key={id}
+            id={project.id}
+            description={project.description}
+            images={project.images}
+            title={project.title}
+            variant="mini"
+            imagePosition={project.imagePosition}
+          />
+        ))}
+      </div>
+    </article>
   );
 };
