@@ -83,7 +83,7 @@ export const projects: ProjectsProps[] = [
     ],
     imagePosition: "left",
     details: [
-      { type: "Start date", info: "28 January 2024" },
+      { type: "Start date", info: "January 24, 2024" },
       {
         type: "Technologies",
         info: ["Next.js", "Tailwind CSS", "MongoDB", "Mongoose"],
@@ -122,7 +122,7 @@ export const projects: ProjectsProps[] = [
     images: ["https://i.imgur.com/8krYAe5.png"],
     imagePosition: "center",
     details: [
-      { type: "Start date", info: "28 January 2024" },
+      { type: "Start date", info: "July 22, 2024" },
       {
         type: "Technologies",
         info: ["Typescript", "Next.js", "Tailwind CSS", "ChatGPT API"],
@@ -158,7 +158,7 @@ export const projects: ProjectsProps[] = [
     images: ["https://i.imgur.com/3TrTPYQ.png"],
     imagePosition: "right",
     details: [
-      { type: "Start date", info: "28 January 2024" },
+      { type: "Start date", info: "July 10, 2023" },
       {
         type: "Technologies",
         info: ["Next.js", "Tailwind CSS", "WeatherApi"],
@@ -195,7 +195,7 @@ export const projects: ProjectsProps[] = [
     images: ["https://i.imgur.com/DrsKYQL.png"],
     imagePosition: "left",
     details: [
-      { type: "Start date", info: "28 January 2024" },
+      { type: "Start date", info: "June 25, 2023" },
       {
         type: "Technologies",
         info: ["Vite", "React.js", "Tailwind CSS", "Framer Motion"],
