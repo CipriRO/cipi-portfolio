@@ -24,14 +24,17 @@ const page = ({ params }: { params: { id: string } }) => {
 
       <PhotoShuffle images={images} variant="maxi" />
 
-      <div className="flex flex-wrap gap-10 items-start">
-        <div className="sticky top-5 min-w-[325px] max-w-[400px] space-y-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)]">
+      <div className="flex flex-col items-start gap-10 min-[930px]:flex-row">
+        <div className="min-[930px]:sticky top-5 flex w-full flex-wrap justify-between gap-6 rounded-3xl bg-foreground px-7 py-6 shadow-[0_2px_20px_rgba(0,_0,_0,_0.1)] min-[930px]:w-[350px]">
           {details.map((detail, id) => (
             <Detail key={id} detail={detail} />
           ))}
         </div>
 
-        <div className="basis-[411px] shrink-0 grow space-y-11">
+        <div className="grow-[9999] basis-[411px] space-y-11">
+          {content.map((content, id) => (
+            <Content key={id} content={content} />
+          ))}
           {content.map((content, id) => (
             <Content key={id} content={content} />
           ))}
@@ -42,20 +45,18 @@ const page = ({ params }: { params: { id: string } }) => {
 };
 export default page;
 
-const Content = ({
-  content,
-}: {
-  content: ProjectContentProps;
-}) => {
+const Content = ({ content }: { content: ProjectContentProps }) => {
   const { type, info } = content;
 
   return (
     <div className="space-y-4">
       <H2>{type}</H2>
       {Array.isArray(info) ? (
-        <ul className="list-disc list-inside">
+        <ul className="list-inside list-disc">
           {info.map((info, id) => (
-            <li key={id} className="text-lg">{info}</li>
+            <li key={id} className="text-lg">
+              {info}
+            </li>
           ))}
         </ul>
       ) : (
@@ -65,11 +66,7 @@ const Content = ({
   );
 };
 
-const Detail = ({
-  detail,
-}: {
-  detail: ProjectContentProps;
-}) => {
+const Detail = ({ detail }: { detail: ProjectContentProps }) => {
   const { type, info } = detail;
 
   return (
