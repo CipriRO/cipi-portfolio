@@ -5,7 +5,7 @@ import { cn } from "@/app/lib/utils";
 
 const CtaButtons = ({ className }: { className?: ClassValue }) => {
   return (
-    <div className={cn("flex flex-wrap justify-center gap-5", className)}>
+    <div className={cn("flex flex-wrap items-center justify-center gap-5", className)}>
       <Link href="/contact" className={ButtonVariants()}>
         Get In Touch
       </Link>
